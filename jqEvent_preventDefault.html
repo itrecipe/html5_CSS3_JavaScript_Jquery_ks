@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        //이벤트를 연결한다.
+        $(document).ready(function () {
+            //a태그에 이벤트를 연결한다.
+            $('a').click(function (event) {
+                //출력한다.
+                alert('click!');
+                //기본 이벤트를 제거한다.
+                event.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="http://hanbit.co.kr">한빛</a>
+</body>
+</html>

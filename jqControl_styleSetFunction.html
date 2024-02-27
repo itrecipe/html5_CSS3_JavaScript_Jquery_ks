@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            //문서 객체를 추가한다.
+            let output = '';
+            for (let i = 0; i < 256; i++) {
+                output += '<div></div>';
+            }
+            document.body.innerHTML = output;
+            //스타일을 적용한다.
+            $('div').css({
+               height : 2,
+               backgroundColor : function (i) {
+                return 'rgb(' + i + ',' + i + ',' + i + ')';
+               } 
+            });
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
