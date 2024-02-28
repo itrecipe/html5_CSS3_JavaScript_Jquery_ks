@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.item:nth-child(1) { background: blueviolet; }
+        div.item:nth-child(2) { background: pink; }
+        div.item:nth-child(3) { background-color: burlywood; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            //변수 선언
+            let width = $('[data-role="slider"]').attr('data-width');
+            let height = $('[data-role="slider"]').attr('data-height');
+            let count = $('[data-role="slider"] div.item').length;
+
+            $('[data-role="slider"]').css({
+                position : 'relative', //절대값이 아닌 상대값을 갖게 한다.
+                overflow : 'hidden',
+                width : width,
+                height : height
+            }).find('.container').css({
+                position : 'absolute', //절대값으로 집어 넣는다.
+                width : count * width,
+                overflow : 'hidden'
+            }).find('.item').css({
+                width : width,
+                height : height,
+                float : 'left'
+            });
+            
+            $(document).ready(function () {
+                let currentPage = 0;
+                let changePage = function () {
+                    $('[data-role="slider"] > .container').animate({
+                        left : -currentPage * width
+                    }, 500);
+                };
+                
+                //버튼 이벤트 연결
+                $('#left-button').click(function () { 
+                    if (currentPage > 0) {
+                        currentPage = currentPage - 1;
+                        changePage();
+                    }
+                });
+                
+                $('#right-button').click(function () { 
+                    if (currentPage < count - 1) {
+                        currentPage = currentPage + 1;
+                        changePage();
+                    }
+                });
+            });
+        });
+            </script>
+</head>
+<body>
+    <div data-role="slider" data-width="500" data-height="300">
+        <div class="container">
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet 1</h1>
+                <p>1 - Donec laoreet suscipit tellus, ut vulputate urna tristique nec. Cras elementum magna id ipsum
+                    malesuada dictum. Proin vehicula elementum enim. Donec et nunc ac risus mattis placerat.
+                    Pellentesque volutpat scelerisque enim a pellentesque. Nulla placerat nisi ut ipsum mattis lacinia.
+                    Curabitur mattis congue nisl vel fringilla.</p>
+            </div>
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet 2</h1>
+                <p>2 - Donec laoreet suscipit tellus, ut vulputate urna tristique nec. Cras elementum magna id ipsum
+                    malesuada dictum. Proin vehicula elementum enim. Donec et nunc ac risus mattis placerat.
+                    Pellentesque volutpat scelerisque enim a pellentesque. Nulla placerat nisi ut ipsum mattis lacinia.
+                    Curabitur mattis congue nisl vel fringilla.</p>
+            </div>
+            <div class="item">
+                <h1>Lorem ipsum dolor sit amet 3</h1>
+                <p>3 - Donec laoreet suscipit tellus, ut vulputate urna tristique nec. Cras elementum magna id ipsum
+                    malesuada dictum. Proin vehicula elementum enim. Donec et nunc ac risus mattis placerat.
+                    Pellentesque volutpat scelerisque enim a pellentesque. Nulla placerat nisi ut ipsum mattis lacinia.
+                    Curabitur mattis congue nisl vel fringilla.</p>
+            </div>
+        </div>
+    </div>
+    <button id="left-button">←</button>
+    <button id="right-button">→</button>
+</body>
+</html>

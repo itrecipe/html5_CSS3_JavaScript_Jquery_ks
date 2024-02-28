@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            let count = 0;
+            let image = document.getElementById('ani');
+            let frames = [
+                'ani/0.png', 'ani/1.png', 'ani/2.png', 'ani/3.png',
+                'ani/4.png', 'ani/5.png', 'ani/6.png', 'ani/7.png',
+                'ani/8.png', 'ani/9.png', 'ani/10.png', 'ani/11.png',
+                'ani/12.png', 'ani/13.png', 'ani/14.png'
+            ];
+
+            setInterval(function (){
+                image.src = frames[count % frames.length];
+                count = count + 1;
+            }, 1000 / 1000);
+            
+        };
+    </script>
+</head>
+<body>
+    <img id="ani">
+</body>
+</html>
