@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 초기화 -->
+    <style>
+        /* 전체 선택자를 사용 */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+
+    <!-- 공통 구성 -->
+    <style>
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px; /* 쌤이 패딩값은 누르는거라고 하셨음 */
+            padding-right: 10px;
+        }
+    </style>
+
+    <!-- 헤더 구성 -->
+    <style>
+        #main-header {
+            padding: 10px 5px;
+        }
+
+        #main-header h1 {
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 27px;
+            color: #222;
+        }
+
+        #main-header ul {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #main-header li {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #main-header li a {
+            color: #555;
+        }
+
+        #main-header li.active a {
+            color: black;
+            font-weight: 500;
+        }
+
+        #main-header label {
+            text-align: center;
+            float: right;
+            width: 40px;
+            height: 27px;
+            line-height: 27px;
+            color: #222;
+            border: 1px solid #222;
+            border-radius: 5px;
+        }
+
+        #checkbox {
+            display: none;
+        }
+
+        #checkbox+nav {
+            display: block;
+        }
+
+        #checkbox:checked+nav {
+            display: none;
+        }
+    </style>
+
+    <!-- 본문과 푸터 -->
+    <style>
+        #main-content {
+            background: #00afa0;
+            padding: 40px 15px 30px;
+        }
+
+        #main-content h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: 500;
+        }
+
+        #main-content p {
+            color: #222;
+            text-align: center;
+            color: white;
+        }
+
+        #sub-content {
+            padding-top: 30px;
+        }
+
+        #sub-content h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #sub-content h2 {
+            text-align: center;
+            color: #333;
+            font-size: 17px;
+        }
+
+        #sub-content p {
+            color: #555;
+        }
+
+        #sub-content img {
+            width: 200px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        #main-footer {
+            padding-top: 40px;
+        }
+
+        footer {
+            background: #323232;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-header">
+        <header class="container">
+            <div>
+                <!-- label for 속성을 사용하면 연결이 가능해지며 checkbox 라는 이름의 id값을 찾아간다.-->
+                <label for="checkbox">▼</label>
+                <h1>hanbit</h1>
+            </div>
+            <input id="checkbox" checked="checked" type="checkbox">
+            <nav>
+                <ul>
+                    <li><a href="#">Brand</a></li>
+                    <li class="active"><a href="#">NetWork</a></li>
+                    <li><a href="#">Store</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div id="main-content">
+        <article class="container">
+            <h1>Lorem Ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+    </div>
+    <div id="sub-content">
+        <article class="container">
+            <h1>혼자 공부하는 머신러닝 + 딥러닝</h1>
+            <h2>1:1 과외하듯 배우는 인공지능 자습서</h2>
+            <img src="image_0.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent purus leo, volutpat sit amet leo ac,
+                ultrices imperdiet odio. Nullam ultricies egestas magna ac mattis. Maecenas posuere nisi vitae nibh
+                ornare aliquam. Nam interdum porttitor venenatis. Nullam nisl erat, fringilla vel pellentesque ut,
+                congue vitae leo. Morbi semper justo sapien, a viverra ipsum dapibus et. Suspendisse quis est sed odio
+                rutrum semper eget at sapien. Phasellus at iaculis sem. Morbi id rutrum lacus. Sed lectus sapien,
+                lobortis ut laoreet nec, ullamcorper placerat orci. Nunc commodo tellus at lacus molestie, ut mollis mi
+                euismod. Fusce at condimentum est.</p>
+            <br>
+            <h1>나도 손글씨 반듯하게 써불면 소원이 없겄네 ~</h1>
+            <h2>악필 교정부터 유려한 글씨체까지 4주 완성 펜크체 연습법</h2>
+            <img src="image_1.jpg">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent purus leo, volutpat sit amet leo ac,
+                ultrices imperdiet odio. Nullam ultricies egestas magna ac mattis. Maecenas posuere nisi vitae nibh
+                ornare aliquam. Nam interdum porttitor venenatis. Nullam nisl erat, fringilla vel pellentesque ut,
+                congue vitae leo. Morbi semper justo sapien, a viverra ipsum dapibus et. Suspendisse quis est sed odio
+                rutrum semper eget at sapien. Phasellus at iaculis sem. Morbi id rutrum lacus. Sed lectus sapien,
+                lobortis ut laoreet nec, ullamcorper placerat orci. Nunc commodo tellus at lacus molestie, ut mollis mi
+                euismod. Fusce at condimentum est.</p>
+        </article>
+    </div>
+    <div id="main-footer">
+        <footer class="container">
+            <div>ⓒ1991-2023 Example. All rights reserved.</div>
+        </footer>
+    </div>
+</body>
+
+</html>
