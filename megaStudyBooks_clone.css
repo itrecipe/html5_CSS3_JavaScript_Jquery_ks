@@ -1,0 +1,63 @@
+/* 폰트 적용 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html>body {
+    font-family: 'GmarketSansMedium';
+}
+
+/* 라이브러리 */
+.con {
+    max-width: 1500px;
+}
+
+/* 커스텀 */
+.top-bar__head {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-search-box>.form-control {
+    max-width: 260px;
+    height: 36px;
+    border: 1px solid #CFCFCF;
+    border-radius: 2rem;
+    padding: 20px 16px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-search-box>.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rm rgba(0, 123, 255, .25);
+}
+
+.form-search-box>.form-control::placeholder {
+    /* input::placeholder 인풋창에 있는 placeholder을 선택하겠다는 의미 */
+    padding-left: 15px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.form-search-box>.btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    background-color: #0082ff;
+    margin-left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-icon-box i {
+    font-size: 1.8rem;
+}
+
+.menu-1 > ul > li > a {
+    display: flex;
+}

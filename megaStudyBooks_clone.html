@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>메가스터디 북스 - 클론코딩</title>
+
+  <!-- UI/UX 레이아웃 구성시 색상을 꼭 칠해보면서 작업할것,
+       하고 안하고의 차이는 천지차이가 느껴진다.
+       작업시 색으로 표현되기 때문에 한눈에 볼 수 있다.    
+  -->
+
+  <!-- css파일 외부에서 끌어오기 -->
+  <link rel="stylesheet" href="megaStudyBooks_clone.css" type="text/css">
+  
+  <!-- 테일윈드 불러오기 cdn -->
+  <script src="https://cdn.tailwindcss.com"></script> 
+
+  <!-- 폰트어썸 불러오기 cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+</head>
+<body>
+  
+<!-- 웬만하면 컨테이너 같은 경우는 웬만하면 안건드는게 좋다고 함 -->
+  <div class="site-wrap">
+    <header class="top-bar">
+      <div class="top-bar__head">
+        <!-- pr-[5px]은 padding right를 5px만큼 조정한다 라는 의미 -->
+        <div class="con mx-auto pr-[5px]"> 
+          <!-- py는 padding, top, bottom 을 나타내며 flex justify-end로 우측끝으로 보낸다. 
+            (즉, 검색창을 우측 끝으로 밀어냄) -->
+          <div class="py-[6px] flex justify-end gap-x-[30px]">
+            <!-- 아래 input과 button span안에 들어가 있고,
+                span은 기본적으로 inline이며 span 요소내에 있기 때문에
+                그 안에 있는 요소들을 수직정렬 해주고 싶다면 flex를 사용 해야 한다.)
+                items-center로 수직정렬을 해줌.
+             -->
+            <div class="form-search-box flex items-center">
+              <input class="form-control" type="text" placeholder="검색어 입력">
+              
+              <!-- <input type="button" value="button"> 버튼 작성은 이렇게도 가능 -->
+              <button class="btn">
+                <span class="text-white">
+                    <!-- 각자 스타일인것 같은데 서치 버튼을 나는 보통 span으로 감싸 주는편이다. -->
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+              </button>
+            </div>
+            <!-- mt-[2px]는 magin top 2px만큼 조정하라는 의미 -->
+            <div class="login-icon-box self-center bg-blue-300 mt-[2px]">
+                <a href="#">
+                  <i class="fa-regular fa-user"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="top-bar__body">
+
+        <!-- 메뉴를 3등분 해주기 위해 flex 속성 사용-->
+        <div class="con mx-auto flex bg-red-300 p-[5px_30px]">
+          
+          <!-- Logo -->
+          <div class="flex-1 bg-blue-300">
+            <a href="#">
+              <img src="https://www.megastudybooks.com/img/logo.svg" alt="메가스터디북스 로고">
+            </a>
+          </div>
+          
+          <!-- Menu -->
+          <div class="menu-1">
+            <nav class="menu-1 bg-blue-300 h-full">
+              <ul class="flex">
+                <li><a href="#">아이템1</a></li>
+                <li><a href="#">아이템2</a></li>
+                <li><a href="#">아이템3</a></li>
+                <li><a href="#">아이템4</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+          <!-- tailwind 문법 : flex-1은, items-center는 수직 정렬, justify-end는 우측 끝으로 이동  -->
+          <div class="flex-1 bg-green-300 flex items-center justify-end">
+            <!-- 아래 span에 text-3xl 이런식으로 줘도 되지만 정밀하게 주려면
+                 text-[2rem] 이런식으로 줘도 된다고 한다. (취향껏 주면 된다.) -->
+                <!-- tailwind 문법 : cursor-pointer 클릭하는 요소라는걸 의미 한다.-->
+                 <span class="text-[2rem] cursor-pointer">
+              <i class="fa-solid fa-bars"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+</body>
+
+</html>
