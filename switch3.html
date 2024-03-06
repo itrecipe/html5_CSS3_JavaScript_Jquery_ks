@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 작수와 홀수 구분(누적 예제)
+        if else 조건문으로 짝수와 홀수 구분하기 
+    -->
+    <script>
+        //입력이 문자열이므로 다음과 같은 코드를 사용할 수 있다.
+        const 입력 = prompt('정수를 입력!')
+        const 끝자리 = 입력 [입력.length -1]
+
+        //끝자리만 비교
+        if(끝자리 === "0" ||
+        끝자리 === "2" ||
+        끝자리 === "4" ||
+        끝자리 === "6" ||
+        끝자리 === "8") {
+            alert(`${입력}은 짝수!`)
+        } else {
+            alert(`${입력}은 홀수!`)
+        }       
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

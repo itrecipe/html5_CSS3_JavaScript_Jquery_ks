@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        const input = prompt('숫자를 입력해라', '')
-        const number = Number(input)
+        let output = ''
 
-        const result = (number-1 >= 0 ? '0 이상의 숫자' : '0 이하의 숫자')
-        alert(result)
+        for(let i = 1; i < 10; i++) {
+            for(let j=0; j < i; j++) {
+                output += '*'
+            }
+            output += '\n'
+        }
+
+        confirm(output)
     </script>
 </head>
 <body>

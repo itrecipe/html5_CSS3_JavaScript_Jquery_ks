@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- continue 중요! 사용법 숙지 및 이해하기
+         break문과 같이 자주사용되는 녀석
+    -->
+    <script>
+        let output = 0
+        
+        //반복문
+        for(let i = 1; i <= 10; i++) {
+            //조건문
+            if(i % 2 === 1) {
+                //홀수면 현재 반복을 중지하고 다음 반복을 수행
+                continue
+            }
+            output += i
+        }
+
+        alert(output)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
