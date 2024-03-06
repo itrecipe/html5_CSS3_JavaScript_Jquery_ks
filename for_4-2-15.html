@@ -12,30 +12,31 @@
             for(let j = 10; j > i; j--) {
                 output += 'x'
             }
-            for(let k = 0; k < (2 * i) - 1; k++) {
+            for(let k = 0; k < (2 * i) - 1; k++) { //별의 갯수를 의미 (2 * i) - 1;
                 output += '*'
             }
                 output += '\n'
         }
         console.log(output)
-    </script> -->
+    </script>
+     -->
 
-    <script>
-     let result = ''
-    
-     for(let i = 0; i < 10; i++) {
-        for(let j = 10; j > i; j++) {
-            result += '@'
+     <script>
+        let output = ''
+
+        for(let i = 10; i > 1; i--) {
+            //공백을 출력하기 위한 반복문
+            for(let j = 1; j < i; j++) {
+                output += ' '
+            }
+            for(let k = 0; k < (2 * i) - 1; k++) { //별의 갯수를 의미 (2 * i) - 1;
+                output += '*'
+            }
+                output += '\n'
         }
-        for(let k = 0; k < (2 * i) - 1; k++) {
-            result += '*'
-        }
-            result += '\n'
-     }
-     console.log(result)
+        console.log(output)
     </script>
 </head>
 <body>
-    
 </body>
 </html>
