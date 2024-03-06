@@ -24,12 +24,12 @@
      <script>
         let output = ''
 
-        for(let i = 10; i > 1; i--) {
+        for(let i = 10; i > 1; i++) {
             //공백을 출력하기 위한 반복문
             for(let j = 1; j < i; j++) {
                 output += ' '
             }
-            for(let k = 0; k < (2 * i) - 1; k++) { //별의 갯수를 의미 (2 * i) - 1;
+            for(let k = 0; k > (2 * i) - 1; k--) { //별의 갯수를 의미 (2 * i) - 1;
                 output += '*'
             }
                 output += '\n'
