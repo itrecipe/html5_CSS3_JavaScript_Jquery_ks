@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 익명함수와 화살표함수를 사용할때 객체의 메소드로 this키워드를
+         다루는법이 상이한대 주의사항 정도로만 알아두라고 하셨다.
+        (잘 쓸일은 없다고 한다.)
+        */
+       
+        const test = {
+            a: function () {
+                console.log(this) //익명 함수로 선언
+            },
+            b: () => { //화살표 함수를 선언
+                console.log(this)
+            }
+        }
+        test.a()
+        test.b()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

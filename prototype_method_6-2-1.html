@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // power() 메소드 추가
+        /* prototype에 메소드를 추가하면 모든 객체를 사용할 수 있다고 한다.
+           반복해서 메소드를 쓰고 싶을때 쓴다. */
+           
+        Number.prototype.power = function (n = 2) {
+            return this.valueOf() ** n //제곱을 헀음
+        }
+
+        // Number 객체의 power() 메소드 사용
+        // 일시적 승급을 사용한 예제
+        const a = 12
+        console.log('a.power() : ', a.power())
+        console.log('a.power(3) : ', a.power(3))
+        console.log('a.power(4) : ', a.power(4))
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

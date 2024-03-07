@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const 구름 = {
+            이름 : '구름',
+            나이 : 6,
+            종족 : '강아지'
+        }
+
+        // 전개연산자가 앞에 있는 경우
+        const 별 = {
+            ...구름,
+            이름 : '별',
+            나이 : 1,
+            예방접종 :true
+        }
+        
+        /* 전개연산자가 뒤에 있는 경우
+        const 별 = {
+            이름 : '별', //기존 속성 덮어쓰기
+            나이 : 1, //기존 속성 덮어쓰기
+            예방접종 : true, //기존 속성 덮어쓰기
+            ...구름
+        }
+        */
+
+        console.log(JSON.stringify(구름, null, 2))
+        console.log(JSON.stringify(별, null, 2))
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

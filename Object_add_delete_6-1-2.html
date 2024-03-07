@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //객체 선언
+        const student = {}
+        student.이름 = '윤인성'
+        student.취미 = '악기'
+        student.장래희망 = '생명공학자'
+
+        //delete메서드 사용법 : object에 key값을 넣어주면 해당 객체에 있는 값이 삭제된다.
+        //delete student.장래희망
+
+        //출력
+        console.log(JSON.stringify(student, null, 2)) 
+        //JSON.stringify(student, null, 2) student객체를 아무것도 제거하지 말고 2줄 띄워서 JSON형태로 출력해줘 라는 의미
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //JSON 형태로 출력하기
+
+        //자료 생성
+        const data = [{
+            name : '혼공파',
+            price : 18000,
+            publisher : '한빛미디어'
+        }, {
+            name : 'HTML5 웹 프로그래밍 입문',
+            price : 26000,
+            publisher : '한빛미디어'
+        }]
+        
+        //자료를 JSON 형식으로 변환
+        const json = JSON.stringify(data);
+        console.log(JSON.stringify(data, null, 2))
+        
+        //JSON.parse로 객체 형식으로 변환
+        console.log(JSON.parse(json))
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
