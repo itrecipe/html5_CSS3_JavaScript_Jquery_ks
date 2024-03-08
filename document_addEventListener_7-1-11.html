@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //이벤트 연결
+     document.addEventListener('DOMContentLoaded', () => {
+
+         let counter = 0
+         const h1 = document.querySelector('h1')
+         
+         h1.addEventListener('click', (event) => {
+             counter++
+             h1.textContent = `click 횟수! : ${counter}` // h1 태그에 이벤트가 발생할 때 실행 될 함수
+        })
+    })
+            
+    </script>
+    <style>
+        h1 {
+            /* 클릭을 여러번 할때 글자가 선택되는 걸 막기 위한 스타일 */
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+   <h1>클릭 횟수!</h1> 
+</body>
+</html>
