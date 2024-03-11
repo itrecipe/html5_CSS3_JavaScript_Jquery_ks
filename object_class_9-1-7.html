@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Student {
+            //constructor : 생성자 (필요한 속성이 있을때 추가 하는것)
+            constructor (이름, 국어, 영어, 수학, 과학) { 
+                this.이름 = 이름
+                this.국어 = 국어
+                this.영어 = 영어
+                this.수학 = 수학
+                this.과학 = 과학
+            }
+        }
+
+        //객체 선언
+        const students = []
+        students.push(new Student('펀치', 87, 98, 88, 90))
+        students.push(new Student('박혜원', 92, 98, 96, 88))
+        students.push(new Student('에일리', 76, 96, 94, 86))
+        students.push(new Student('윈터', 98, 52, 98, 92))
+
+        console.log(students)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
