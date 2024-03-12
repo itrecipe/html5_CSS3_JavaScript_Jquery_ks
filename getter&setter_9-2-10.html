@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +7,27 @@
     <script>
         // 정사각형 클래스
         class Square {
+            /*  private 속성 : 클래스 내부에서만 접근 가능한 속성 ex)#length
+                private은 클래스를 더 안전하게 사용하기 위해 나온 기능 */
             #length
 
             constructor(length) {
                 this.length = length
             }
 
-            get length () {
+            get length() {
                 return this.#length
             }
 
-            get Perimeter () {
+            get Perimeter() {
                 return this.#length * 4
             }
 
-            get Area () {
+            get Area() {
                 return this.#length * this.#length
             }
 
-            set Length (length) {
+            set length(length) {
                 if (value <= 0) {
                     throw '길이는  0보다 커야 합니다.'
                 }
@@ -34,7 +35,7 @@
             }
 
         }
-    
+
         // 클래스 사용하기
         const squareA = new Square(-10)
         console.log(`한 변의 길이 : ${squareA.getLength()} 입니다.`)
@@ -45,9 +46,6 @@
         const squareB = new Square(-10)
     </script>
 </head>
-
 <body>
-
 </body>
-
 </html>

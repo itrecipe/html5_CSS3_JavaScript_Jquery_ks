@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //정사각형 나타낼 객체
+        class Square { //Square라는 이름의 클래스를 생성
+            constructor (length) { //생성자를 생성 해주고 한 변의 길이를 받아올 매개변수 length를 집어 넣는다.
+                this.length = length //this 키워드를 사용해서 length속성을 지정
+
+            }
+
+            //넓이와 둘레를 구할 메서드 생성
+            getArea () {
+                return this.length * this.length; //두 변을 곱해준다
+            }
+
+            getPremiter () {
+                return 4 * this.length
+            }
+        }
+        const square = new Square(10) //한변의 길이를 지정하는 Square 객체를 생성한다.
+        console.log(square.getArea()) //정사각형의 넓이를 구할 객체.메서드를 만들어놓고 console.log()로 출력 / output : (100)
+        console.log(square.getPremiter()) //정사각형의 둘레를 구할 객체.메서드를 만들어놓고 console.log()로 / output : (40)
+    </script>
+</head>
+<body>
+</body>
+</html>
