@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Pet {
+            constructor (name, age) {
+                this.name = name
+                this.age = age
+            }
+
+            /* JS는 내부적으로 어떤 객체를 문자열로 만들때 toString()를 사용한다.
+            */
+            toString () {
+                return `이름 : ${this.name}\n나이: ${this.age}살`
+            }
+        }
+
+        const pet = new Pet('구름', 6)
+        alert(pet)
+        console.log(pet + '')
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
