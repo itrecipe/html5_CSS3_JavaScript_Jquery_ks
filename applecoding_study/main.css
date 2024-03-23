@@ -1,0 +1,11 @@
+.alert-box {
+    background: #aba8f4;
+    color: #4646b4;
+    padding: 20px;
+    border-radius: 5px;
+    display: none; 
+    /* UI만드는법 
+       1. 미리 디자인해놓고 숨긴다.
+       2. 버튼을 누르면 보여준다.
+    */
+}

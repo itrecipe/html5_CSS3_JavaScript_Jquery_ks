@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>셀렉터 이용하기</title>
+</head>
+<body>
+    <h2 id="hello">안녕하세요?</h2>
+    <h2 id="hi" style="color: red;">올때 바밤바</h2>
+    
+
+    <script>
+
+        /*
+        .은 ~의 ~의 의해 라는 뜻임, 추가적으로 문장을 연결 해주는 연산자 이기도 함
+        id가 헬로인 문서를 내부글자에서 가져와서 변경해라 라는 의미
+        */
+        document.getElementById('hello').innerHTML = "안녕";
+        document.getElementById('hi').innerHTML = "올때 메로나!";
+        document.getElementById("hi").style.color = 'green';
+        document.getElementById("hi").style.fontSize = '30px';
+
+    </script>
+    
+</body>
+</html>
